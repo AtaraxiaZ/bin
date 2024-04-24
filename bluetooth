@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+
+# M720 Triathlon Device 
+bluetoothctl connect EC:54:BF:5E:76:26 
+# Keyboard K850
+bluetoothctl connect EF:1B:F7:40:6D:C9
