@@ -1,0 +1,17 @@
+#! /usr/bin/env bash
+# source everything needed by FPGA developement
+
+source /fpga/Xilinx/Vivado/2023.1/settings64.sh > /dev/null 2>&1
+source /fpga/petalinux/23.1/settings.sh > /dev/null 2>&1
+
+# license server
+export XILINXD_LICENSE_FILE=27090@eda-lic-45.platform.nlabct.net
+
+# 下面这2条会将所有xilinx的那一套编译链加入$PATH中，导致Verilator无法编译
+# source /tools/Xilinx/xilinx-versal-common-v2021.2/versal-common/environment-setup-cortexa72-cortexa53-xilinx-linux
+# export PLATFORM_REPO_PATHS=/opt/xilinx/platforms
+# If you need aarch64-xilinx toolchains, uncomment the following two lines
+# Caution! Verilator may not find perl correctly when source this script
+# unset LD_LIBRARY_PATH
+# source /opt/petalinux/2023.1/environment-setup-cortexa72-cortexa53-xilinx-linux
+
